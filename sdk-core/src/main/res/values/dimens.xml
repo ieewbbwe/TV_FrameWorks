@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--导航栏高度-->
+    <dimen name="navigation_height">48dp</dimen>
+    <!--errorLayout-->
+    <dimen name="g_loading_minSize">28dp</dimen>
+    <dimen name="g_loading_lineSize">2dp</dimen>
+    <dimen name="default_divider_height">1dp</dimen>
+    <dimen name="default_divider_padding">4dp</dimen>
+    <dimen name="menu_filter_text_size">16sp</dimen>
+
+</resources>

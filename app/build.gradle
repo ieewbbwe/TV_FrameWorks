@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.videoworks.tvnews"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionCode 1
+        versionName "1.0.0"
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug {
+            //添加后缀标识
+            versionNameSuffix "-debug"
+            //是否混淆
+            minifyEnabled false
+            //打包相关
+            zipAlignEnabled false
+            //打包时忽略没用使用的资源
+            shrinkResources false
+        }
+        release {
+            // 移除无用的resource文件
+            shrinkResources true
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file("videoworks.jks")
+            storePassword "videoworks"
+            keyAlias "tvNews"
+            keyPassword "tvnews"
+        }
+        release {
+            storeFile file("videoworks.jks")
+            storePassword "videoworks"
+            keyAlias "tvNews"
+            keyPassword "tvnews"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:leanback-v17:$rootProject.ext.leanbackV17Version"
+    compile "com.android.support:appcompat-v7:$rootProject.ext.appcompatV7Version"
+    compile project(':sdk-net')
+    compile project(':sdk-core')
+
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}

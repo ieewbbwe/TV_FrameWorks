@@ -1,0 +1,65 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 17
+    targetSdkVersion = 23
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.2'
+
+    // App dependencies
+    supportLibraryVersion = '23.0.2'
+    appcompatV7Version = "23.0.2"
+    recyclerViewVersion = "23.0.2"
+    designVersion = "23.0.2"
+    constraintLayoutVersion = "1.0.2"
+    leanbackV17Version = "25.3.1"
+
+    //net lib
+    okHttpVersion = "2.7.5"
+    okIoVersion = "1.9.0"
+    httpMimeVersion = "4.2.1"
+    gsonVersion = "2.4"
+    retrofitConvertVersion = "2.2.0"
+    retrofitVersion = "2.2.0"
+
+    //database lib
+    ormlitVersion = "5.0"
+    ninenoVersion = "2.4.0"
+    LRecyclerVersion = "1.4.3"
+    premissionVersion = "1.0.3"
+
+    //Rx Lib
+    rxJavaVersion = "1.1.0"
+    rxJavaAdapterVersion = "2.0.2"
+    rxAndroidVersion = "1.1.0"
+    rxLifeVersion = "0.3.1"
+    rxBindingVersion = "0.4.0"
+    retrofitLogVersion = "3.6.0"
+    glideVersion = "3.7.0"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
