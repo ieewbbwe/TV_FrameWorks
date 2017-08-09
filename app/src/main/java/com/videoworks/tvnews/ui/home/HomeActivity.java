@@ -3,6 +3,7 @@ package com.videoworks.tvnews.ui.home;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,6 +13,8 @@ import com.tv.boost.widget.tablayout.TvTabLayout;
 import com.videoworks.tvnews.NActivity;
 import com.videoworks.tvnews.R;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -19,7 +22,7 @@ import butterknife.ButterKnife;
  * Create by mxh on 2017/8/8
  * Describe：应用首页
  */
-public class HomeActivity extends NActivity {
+public class HomeActivity extends NActivity implements HomeContract.View{
 
     @Bind(R.id.m_sys_hour_time_tv)
     TextView mSysHourTimeTv;
@@ -34,6 +37,8 @@ public class HomeActivity extends NActivity {
     @Bind(R.id.m_search_bar_ll)
     RelativeLayout mSearchBarLl;
     private FocusBorder focusBorder;
+
+    @Inject HomePresenter mHomePresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,12 +77,10 @@ public class HomeActivity extends NActivity {
                 if (newFocus != null && oldFocus != null) {
                     switch (newFocus.getId()) {
                         case R.id.m_search_bar_ll:
-                        case R.id.m_test_iv:
                         case R.id.m_content_vp:
                             return FocusBorder.OptionsFactory.get(1f, 1f, 90f);
                     }
-
-                    focusBorder.setVisible(true);
+                    focusBorder.setVisible(false);
                 }
                 return null;
 

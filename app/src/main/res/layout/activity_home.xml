@@ -27,13 +27,6 @@
         app:tabTexSize="24dp"
         app:tabTextColor="@drawable/selector_tab_font_color"/>
 
-    <ImageView
-        android:id="@+id/m_test_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:src="@mipmap/ic_launcher"/>
-
     <!--内容-->
     <android.support.v4.view.ViewPager
         android:id="@+id/m_content_vp"
