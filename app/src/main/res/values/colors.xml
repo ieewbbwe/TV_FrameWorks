@@ -15,4 +15,10 @@
     <color name="orange">#FADCA7</color>
     <color name="yellow">#EEFF41</color>
     <color name="default_background">#3d3d3d</color>
+    <!--字体颜色-->
+    <color name="focus_white">#e9e6e6</color>
+
+    <!--背景色-->
+    <!--搜索栏背景色-->
+    <color name="search_blue">#173674</color>
 </resources>

@@ -5,9 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3657A4"
     tools:context="com.videoworks.tvnews.ui.home.HomeActivity">
-    <TextView
-        android:text="Hello Tv!"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <!--头部-->
+    <include layout="@layout/layout_content_header"/>
+    <!--导航条-->
+    <!--内容-->
 </LinearLayout>

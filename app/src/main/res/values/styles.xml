@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- 设置无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置全屏-->
+        <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- <item name="colorPrimary">@color/colorPrimary</item>
+         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+         <item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+
+    <style name="normal_test_style">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/focus_white</item>
+    </style>
+
 </resources>
