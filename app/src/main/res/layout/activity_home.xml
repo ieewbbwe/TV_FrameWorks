@@ -6,9 +6,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3657A4"
+    android:orientation="vertical"
+    android:padding="@dimen/content_padding"
     tools:context="com.videoworks.tvnews.ui.home.HomeActivity">
     <!--头部-->
     <include layout="@layout/layout_content_header"/>
     <!--导航条-->
+    <com.tv.boost.widget.tablayout.TvTabLayout
+        android:id="@+id/m_content_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="15dp"
+        app:tabIndicatorResId="@mipmap/ic_tab_navigation_indicator"
+        app:tabIndicatorWidth="110dp"
+        app:tabMinWidth="120dp"
+        app:tabPaddingBottom="12dp"
+        app:tabScrollMode="scrollable"
+        app:tabTexSize="24dp"
+        app:tabTextColor="@drawable/selector_tab_font_color"/>
+
+    <ImageView
+        android:id="@+id/m_test_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:src="@mipmap/ic_launcher"/>
+
     <!--内容-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/m_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

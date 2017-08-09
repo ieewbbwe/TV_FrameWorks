@@ -1,86 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout android:id="@+id/m_content_header_rl"
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/content_header_height"
-                android:layout_margin="@dimen/content_padding"
                 android:orientation="vertical">
     <!--left-->
+    <!--时间模块-->
     <LinearLayout
+        android:id="@+id/m_time_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@id/right"
-        android:gravity="center_vertical">
-        <!--时间模块-->
-        <LinearLayout
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/m_search_bar_ll">
+
+        <TextView
+            android:id="@+id/m_sys_hour_time_tv"
+            style="@style/normal_test_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp">
+            android:text="18"
+            android:textSize="36sp"/>
 
-            <TextView
-                android:id="@+id/m_sys_hour_time_tv"
-                style="@style/normal_test_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="18"
-                android:textSize="36sp"/>
+        <TextView
+            style="@style/normal_test_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"/>
 
-            <TextView
-                style="@style/normal_test_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=":"/>
-
-            <TextView
-                android:id="@+id/m_sys_time_minute_tv"
-                style="@style/normal_test_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="30"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/m_sys_time_minute_tv"
+            style="@style/normal_test_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"/>
 
         <TextView
             android:id="@+id/m_locate_tv"
             style="@style/normal_test_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="贵阳"/>
+            android:layout_alignBottom="@+id/m_time_ll"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/m_time_ll"
+            android:text="贵阳"
+            android:textSize="20sp"/>
     </LinearLayout>
+
     <!--right-->
-    <LinearLayout
-        android:id="@+id/right"
+    <RelativeLayout
+        android:id="@+id/m_search_bar_ll"
         android:layout_width="@dimen/search_bar_width"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true">
-
-        <com.videoworks.tvnews.ui.view.metro.MetroItemFrameLayout
-            android:layout_width="@dimen/search_bar_width"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_search_bg"
-            android:focusable="true">
-
-            <RelativeLayout
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_search_bg"
+        android:focusable="true">
+        <!-- <EditText
+                android:id="@+id/m_search_et"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <!-- <EditText
-                        android:id="@+id/m_search_et"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:background="@null"/>-->
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"/>-->
 
-                <ImageView
-                    android:id="@+id/m_search_button_iv"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:padding="5dp"
-                    android:src="@mipmap/ic_launcher"/>
-            </RelativeLayout>
+        <ImageView
+            android:id="@+id/m_search_button_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@mipmap/ic_launcher"/>
+    </RelativeLayout>
 
-        </com.videoworks.tvnews.ui.view.metro.MetroItemFrameLayout>
-
-    </LinearLayout>
 </RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="IconButton">
+        <attr name="tv_icon" format="reference"/>
+        <attr name="tv_iconWidth" format="dimension"/>
+        <attr name="tv_iconHeight" format="dimension"/>
+        <attr name="tv_iconMoveOffset" format="dimension"/>
+        <attr name="tv_text" format="string|reference"/>
+        <attr name="tv_textColor" format="reference|color"/>
+        <attr name="tv_textSize" format="dimension"/>
+        <attr name="tv_textPadding" format="dimension"/>
+        <attr name="tv_textBg" format="reference"/>
+    </declare-styleable>
+
+</resources>

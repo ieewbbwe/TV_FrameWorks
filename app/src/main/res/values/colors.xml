@@ -21,4 +21,6 @@
     <!--背景色-->
     <!--搜索栏背景色-->
     <color name="search_blue">#173674</color>
+    <color name="normal_color">#f1efef</color>
+    <color name="normal_tint_color">#99f1efef</color>
 </resources>

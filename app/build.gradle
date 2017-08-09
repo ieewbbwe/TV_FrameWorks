@@ -58,6 +58,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.ext.appcompatV7Version"
     compile project(':sdk-net')
     compile project(':sdk-core')
+    compile project(':sdk-tv-widget')
 
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
