@@ -14,7 +14,7 @@
          <item name="colorAccent">@color/colorAccent</item>-->
     </style>
 
-    <style name="normal_test_style">
+    <style name="normal_text_style">
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/focus_white</item>
     </style>

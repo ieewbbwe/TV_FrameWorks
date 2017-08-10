@@ -1,0 +1,31 @@
+别名: tvnews
+创建日期: 2017-8-8
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: CN=tvnews, OU=videoworks, O=videoworks, L=WuHan, ST=HuBei, C=086
+发布者: CN=tvnews, OU=videoworks, O=videoworks, L=WuHan, ST=HuBei, C=086
+序列号: 4082dda3
+有效期开始日期: Tue Aug 08 11:34:08 CST 2017, 截止日期: Wed Jul 27 11:34:08 CST 2067
+证书指纹:
+         MD5: 13:55:31:56:D4:88:6D:F8:8C:48:9C:98:13:F1:D4:5A
+         SHA1: 80:73:55:FB:C3:DD:9D:85:97:97:44:5F:D7:63:E7:EC:26:06:07:9D
+         SHA256: 3D:28:1F:8B:B0:13:13:40:6D:77:16:87:16:DE:F7:29:AC:09:81:51:1E:E2:57:6E:E3:D9:97:70:14:F8:FF:DB
+         签名算法名称: SHA256withRSA
+         版本: 3
+
+扩展:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 38 74 03 C0 AF 17 DF 01   99 3C 68 71 4F 9D 62 1C  8t.......<hqO.b.
+0010: 69 F6 31 B3                                        i.1.
+]
+]
+
+
+
+*******************************************
+*******************************************
+

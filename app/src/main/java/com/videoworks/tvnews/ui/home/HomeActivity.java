@@ -3,15 +3,19 @@ package com.videoworks.tvnews.ui.home;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.tv.boost.widget.TvViewPager;
 import com.tv.boost.widget.focus.FocusBorder;
 import com.tv.boost.widget.tablayout.TvTabLayout;
 import com.videoworks.tvnews.NActivity;
 import com.videoworks.tvnews.R;
+import com.videoworks.tvnews.model.CategoryBean;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -22,7 +26,10 @@ import butterknife.ButterKnife;
  * Create by mxh on 2017/8/8
  * Describe：应用首页
  */
-public class HomeActivity extends NActivity implements HomeContract.View{
+public class HomeActivity extends NActivity implements HomeContract.View {
+
+    @Inject
+    HomePresenter mHomePresenter;
 
     @Bind(R.id.m_sys_hour_time_tv)
     TextView mSysHourTimeTv;
@@ -36,9 +43,11 @@ public class HomeActivity extends NActivity implements HomeContract.View{
     TvTabLayout mContentTb;
     @Bind(R.id.m_search_bar_ll)
     RelativeLayout mSearchBarLl;
+    @Bind(R.id.m_content_vp)
+    TvViewPager mContentVp;
     private FocusBorder focusBorder;
-
-    @Inject HomePresenter mHomePresenter;
+    private HomePagerAdapter mPagerAdapter;
+    private List<CategoryBean> categoryBeanList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +63,6 @@ public class HomeActivity extends NActivity implements HomeContract.View{
     @Override
     protected void initComp() {
         ButterKnife.bind(this);
-        mSearchBarLl.requestFocus();
         initBorder(true);
 
     }
@@ -77,7 +85,6 @@ public class HomeActivity extends NActivity implements HomeContract.View{
                 if (newFocus != null && oldFocus != null) {
                     switch (newFocus.getId()) {
                         case R.id.m_search_bar_ll:
-                        case R.id.m_content_vp:
                             return FocusBorder.OptionsFactory.get(1f, 1f, 90f);
                     }
                     focusBorder.setVisible(false);
@@ -93,9 +100,17 @@ public class HomeActivity extends NActivity implements HomeContract.View{
      */
     @Override
     protected void initData() {
+        /*---------测试数据-----------*/
+        categoryBeanList = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
+            categoryBeanList.add(new CategoryBean("热点", "" + i, "" + "标题" + i));
             mContentTb.addTab(mContentTb.newTab().setText("标题" + i), i == 0);
         }
+        /*----------------------------*/
+        mPagerAdapter = new HomePagerAdapter();
+        mPagerAdapter.setData(categoryBeanList);
+        mContentVp.setAdapter(mPagerAdapter);
+        mContentTb.setupWithViewPager(mContentVp);
     }
 
     private void initBorder(boolean isColorful) {

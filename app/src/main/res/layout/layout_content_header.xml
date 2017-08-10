@@ -16,28 +16,28 @@
 
         <TextView
             android:id="@+id/m_sys_hour_time_tv"
-            style="@style/normal_test_style"
+            style="@style/normal_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="18"
             android:textSize="36sp"/>
 
         <TextView
-            style="@style/normal_test_style"
+            style="@style/normal_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=":"/>
 
         <TextView
             android:id="@+id/m_sys_time_minute_tv"
-            style="@style/normal_test_style"
+            style="@style/normal_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30"/>
 
         <TextView
             android:id="@+id/m_locate_tv"
-            style="@style/normal_test_style"
+            style="@style/normal_text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/m_time_ll"
@@ -69,8 +69,8 @@
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="5dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:padding="10dp"
+            android:src="@mipmap/ic_search_bt"/>
     </RelativeLayout>
 
 </RelativeLayout>

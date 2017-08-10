@@ -1,11 +1,13 @@
 package com.videoworks.tvnews.model;
 
+import com.android_mobile.core.listener.ISelectItem;
+
 /**
  * Created by mxh on 2017/8/8.
  * Describe：新闻栏目tab
  */
 
-public class CategoryBean extends BaseBean {
+public class CategoryBean extends BaseBean implements ISelectItem {
     /**
      * description : 描述
      * id : 5847670d3a50643c66d54b4f
@@ -54,6 +56,14 @@ public class CategoryBean extends BaseBean {
         return name;
     }
 
+    /**
+     * 获取对象id
+     */
+    @Override
+    public String getCode() {
+        return id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -88,5 +98,14 @@ public class CategoryBean extends BaseBean {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public CategoryBean() {
+    }
+
+    public CategoryBean(String description, String id, String name) {
+        this.description = description;
+        this.id = id;
+        this.name = name;
     }
 }

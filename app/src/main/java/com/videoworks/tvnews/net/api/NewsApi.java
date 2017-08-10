@@ -1,6 +1,6 @@
 package com.videoworks.tvnews.net.api;
 
-import com.videoworks.tvnews.model.UrlMgr;
+import com.videoworks.tvnews.net.UrlMgr;
 
 import retrofit2.Response;
 import retrofit2.http.GET;

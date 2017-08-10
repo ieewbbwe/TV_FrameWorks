@@ -1,4 +1,4 @@
-package com.videoworks.tvnews.model;
+package com.videoworks.tvnews.net;
 
 /**
  * Created by mxh on 2017/8/8.

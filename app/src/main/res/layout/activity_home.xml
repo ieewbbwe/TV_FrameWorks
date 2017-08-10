@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3657A4"
+    android:background="@mipmap/ic_content_bg"
     android:orientation="vertical"
     android:padding="@dimen/content_padding"
     tools:context="com.videoworks.tvnews.ui.home.HomeActivity">
@@ -28,7 +28,7 @@
         app:tabTextColor="@drawable/selector_tab_font_color"/>
 
     <!--内容-->
-    <android.support.v4.view.ViewPager
+    <com.tv.boost.widget.TvViewPager
         android:id="@+id/m_content_vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
